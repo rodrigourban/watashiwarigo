@@ -127,7 +127,7 @@ function Projects() {
               {projectList[currentIndex].livePreview && (
                 <a
                   className="flex items-center hover:cursor-pointer text-sm font-semibold uppercase tracking-wider text-darkest  hover:text-primaryColor transition duration-300 pr-4"
-                  href={projectList[currentIndex].livePreview}
+                  href={projectList[currentIndex].livePreview!}
                   target="_blank"
                 >
                   <span className="sr-only">Preview</span>
