@@ -139,7 +139,7 @@ function Workexp() {
           variants={sculptureVariant}
           viewport={{ once: true }}
         >
-          <img src="/greek3.png" height="500" width="400" alt="bust roman" />
+          <img src="./greek3.png" height="500" width="400" alt="bust roman" />
         </motion.div>
       </div>
     </section>

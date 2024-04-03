@@ -104,7 +104,7 @@ function Header() {
           </li>
         </ul>
         <img
-          src="/mylogo-white.png"
+          src="./mylogo-white.png"
           alt="Rigo logo"
           className="h-8 w-8 md:ml-10 ml-4 mr-2"
         />
@@ -118,7 +118,7 @@ function Header() {
           variants={sculptureVariant}
         >
           <img
-            src="/greek.png"
+            src="./greek.png"
             alt="sculpture of David"
             className="w-3/4 mx-auto mt-8 mb-2 md:mb-0 md:mt-0 h-auto"
           />

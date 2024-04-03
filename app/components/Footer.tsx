@@ -6,7 +6,7 @@ function Footer() {
         <div className="sm:flex sm:items-center sm:justify-between">
           <div className="flex justify-center sm:justify-start ">
             <img
-              src="/mylogo-white.png"
+              src="./mylogo-white.png"
               height="64"
               width="64"
               alt="rigo logo"
