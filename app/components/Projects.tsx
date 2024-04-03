@@ -109,7 +109,7 @@ function Projects() {
           <div
             className="h-1/3 w-full md:w-1/2 md:h-full relative bg-contain bg-no-repeat bg-center"
             style={{
-              backgroundImage: `url(/${projectList[currentIndex].imageUrl})`,
+              backgroundImage: `url(./${projectList[currentIndex].imageUrl})`,
             }}
           ></div>
           <div className="h-3/4 md:w-1/2 p-2 md:pl-4 flex justify-between md:justify-between flex-col">

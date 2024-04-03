@@ -30,7 +30,7 @@ export default function RootLayout({
       className={`${firasans.variable} ${ptsans.variable} !scroll-smooth`}
     >
       <body>
-        <div className="bg-[url('/bg.png')] bg-cover bg-center h-full">
+        <div className="bg-[url('./bg.png')] bg-cover bg-center h-full">
           {children}
         </div>
       </body>
