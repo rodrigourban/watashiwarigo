@@ -49,33 +49,34 @@ const SocialsObj = [
 
 const sculptureVariant = {
   initial: {
-    opacity: 0,
+    x: -850,
   },
   animate: {
-    opacity: 1,
+    x: 0,
     transition: {
       type: "spring",
-      delay: 0.01,
+      stiffness: 260,
+      damping: 20,
     },
   },
 };
 
 const contentVariant = {
   initial: {
-    opacity: 0,
+    scale: 0,
   },
   animate: (index: number) => ({
-    opacity: 1,
+    scale: 1,
     transition: {
       type: "spring",
-      delay: index * 0.05,
+      delay: index * 0.01,
     },
   }),
 };
 
 function Header() {
   return (
-    <section className="h-svh">
+    <section className="">
       <motion.nav
         className="flex justify-end items-center py-5 px-2 md:px-20"
         initial="initial"

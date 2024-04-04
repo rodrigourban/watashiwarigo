@@ -79,7 +79,7 @@ const sculptureVariant = {
 
 function Workexp() {
   return (
-    <section id="workexperience">
+    <section id="workexperience" className="scroll-m-20">
       <div className="flex flex-col-reverse md:flex-row justify-between px-5 md:px-10 2xl:ml-24">
         <div className="grid md:p-8">
           <h3 className="text-2xl md:text-4xl text-lighest font-primaryFont font-bold mb-3 md:mb-10 -ml-2">

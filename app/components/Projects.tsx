@@ -76,17 +76,14 @@ function Projects() {
 
   return (
     <section
-      className="my-40 flex flex-row justify-between md:justify-evenly items-center space-x-2 px-5 md:h-svh scroll-mt-56 md:scroll-mt-0"
+      className="my-40 flex flex-row justify-between md:justify-center items-center space-x-2 px-5 md:h-svh"
       id="projects"
     >
-      <div>
-        <FaArrowAltCircleLeft
-          className="h-10 w-10 text-lighest hover:cursor-pointer hover:text-primaryColor transition-all duration-300 md:mt-20 md:mr-5 pr-2 md:pr-0"
-          onClick={() => handleChangeProject("decrease")}
-        />
-      </div>
+      <button onClick={() => handleChangeProject("decrease")}>
+        <FaArrowAltCircleLeft className="h-10 w-10 text-lighest hover:cursor-pointer hover:text-primaryColor transition-all duration-300 md:mt-20 md:mr-5 pr-2 md:pr-0" />
+      </button>
       <motion.div
-        className="flex flex-col w-full md:w-1/2"
+        className=""
         variants={fadeInVariant}
         initial="initial"
         whileInView="animate"
@@ -95,8 +92,10 @@ function Projects() {
         <h3 className="text-2xl md:text-4xl text-lighest font-primaryFont font-bold mb-5 md:mb-10 -ml-1">
           💼 Passion projects
         </h3>
+
         <motion.div
-          className="h-[20rem] w-full bg-lighest rounded-sm -mb-7 shadow-xl flex flex-col md:flex-row md:justify-between space-x-2"
+          className="relative bg-center bg-contain bg-no-repeat md:w-[384px] h-[450px]"
+          style={{ backgroundImage: "url(./phone2.png)" }}
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{
@@ -106,19 +105,18 @@ function Projects() {
           }}
           key={currentIndex}
         >
-          <div
-            className="h-1/3 w-full md:w-1/2 md:h-full relative bg-contain bg-no-repeat bg-center"
-            style={{
-              backgroundImage: `url(./${projectList[currentIndex].imageUrl})`,
-            }}
-          ></div>
-          <div className="h-3/4 md:w-1/2 p-2 md:pl-4 flex justify-between md:justify-between flex-col">
+          <img
+            src={`./${projectList[currentIndex].imageUrl}`}
+            alt={`${projectList[currentIndex].name} app screenshot`}
+            className="absolute top-14 left-1/2 w-[185px] h-[325px] -translate-x-1/2 object-cover"
+          />
+          <div className="absolute -bottom-32 left-10 h-1/2 w-52 rounded-sm shadow-xl p-4 md:w-3/4 md:pl-4 flex justify-between md:justify-between flex-col bg-darkest">
             <div>
-              <h2 className="mt-8 text-2xl md:text-3xl font-bold font-primaryFont text-primaryColor mb-1 md:mb-3">
+              <h2 className="mt-1 text-xl md:text-3xl font-bold font-primaryFont text-primaryColor mb-1 md:mb-3">
                 {projectList[currentIndex].name}
               </h2>
 
-              <p className="text-sm md:text-sm font-secondaryFont text-darkest pr-8">
+              <p className="text-sm md:text-sm font-secondaryFont text-lighest pr-2">
                 {projectList[currentIndex].description}
               </p>
             </div>
@@ -126,7 +124,7 @@ function Projects() {
             <div className="flex mb-2 md:mb-5 justify-end pr-2 md:pr-8">
               {projectList[currentIndex].livePreview && (
                 <a
-                  className="flex items-center hover:cursor-pointer text-sm font-semibold uppercase tracking-wider text-darkest  hover:text-primaryColor transition duration-300 pr-4"
+                  className="flex items-center hover:cursor-pointer text-xs md:text-md font-semibold uppercase tracking-wider text-lighest  hover:text-primaryColor transition duration-300 pr-4"
                   href={projectList[currentIndex].livePreview!}
                   target="_blank"
                 >
@@ -136,7 +134,7 @@ function Projects() {
               )}
 
               <a
-                className="flex justify-center items-center hover:cursor-pointer text-md font-semibold uppercase tracking-wider  hover:text-primaryColor transition duration-300 text-darkest"
+                className="flex justify-center items-center hover:cursor-pointer text-xs md:text-md font-semibold uppercase tracking-wider  hover:text-primaryColor transition duration-300 text-lighest"
                 href={projectList[currentIndex].codeUrl}
                 target="_blank"
               >
@@ -158,7 +156,8 @@ function Projects() {
             </div>
           </div>
         </motion.div>
-        <ul className="flex flex-row mt-20 justify-center items-center mr-5 space-x-4">
+
+        <ul className="flex flex-row mt-48 justify-center items-center mr-5 space-x-4">
           {projectList.map((_, index) => (
             <li
               key={`project number ${index}`}
@@ -170,12 +169,10 @@ function Projects() {
           ))}
         </ul>
       </motion.div>
-      <div>
-        <FaArrowAltCircleRight
-          className="h-10 w-10 text-lighest hover:cursor-pointer hover:text-primaryColor transition-all duration-300 md:mt-20 md:pl-0 md:ml-5 pl-2"
-          onClick={() => handleChangeProject("increase")}
-        />
-      </div>
+
+      <button onClick={() => handleChangeProject("increase")}>
+        <FaArrowAltCircleRight className="h-10 w-10 text-lighest hover:cursor-pointer hover:text-primaryColor transition-all duration-300 md:mt-20 md:pl-0 md:ml-5 pl-2" />
+      </button>
     </section>
   );
 }

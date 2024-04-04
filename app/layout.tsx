@@ -31,7 +31,7 @@ export default function RootLayout({
     >
       <body>
         <div
-          className="bg-cover bg-center h-full"
+          className="bg-cover bg-center"
           style={{ backgroundImage: "url(./bg.png)" }}
         >
           {children}
